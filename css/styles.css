@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #2a7d61;
+    --primary-color-dark: #236a53;
+    --secondary-color: #4a90e2;
+    --secondary-color-dark: #3e8ac6;
+    --danger-color: #ff3f3a;
+    --danger-color-dark: #d32f2f;
+    --background-color: #f3f7f9;
+    --card-background: #fff;
+    --border-color: #ddd;
+    --text-color: #333;
+    --hover-shadow: rgba(0, 0, 0, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    text-align: center;
+}
+
+.logo {
+    width: 90%; 
+    margin-bottom: -50px;
+}
+
+.title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botao {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.agendamentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.consulta {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    padding: 20px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+
+.consulta:hover {
+    box-shadow: 0 4px 10px var(--hover-shadow);
+}
+
+.agendamentosDetalhes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.agendamentosDetalhes td {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.agendamentosDetalhes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.agendamentosDetalhes td:first-child {
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon_editar,
+.icon_excluir {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icon_editar {
+    color: var(--secondary-color);
+}
+
+.icon_excluir {
+    color: var(--danger-color);
+}
+
+.icon_editar:hover {
+    color: var(--secondary-color-dark);
+}
+
+.icon_excluir:hover {
+    color: var(--danger-color-dark);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.novoCadastro {
+    display: block;
+    margin-top: 20px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.novoCadastro:hover {
+    color: var(--secondary-color-dark);
+}
+
+@media (max-width: 600px) {
+    .consulta {
+        width: calc(100% - 20px);
+    }
+}
